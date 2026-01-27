@@ -136,9 +136,16 @@
 		</div>
 		<div id='status-notice' class='godot' style='display: none;'></div>
 	</div>
+    <!-- CensorCore Library Integration -->
+    <script src="https://cdn.jsdelivr.net/gh/DerrickRichard/CensorCore-Library@latest/CensorCore.js"></script>
 	<script src="main.js"></script>
 	<script type='text/javascript' src='webfishing.js'></script>
 	<script type='text/javascript'>//<![CDATA[
+
+        // Initialize CensorCore
+        censor.onReady(() => {
+            console.log("CensorCore moderation system ready for WebFishing.");
+        });
 
 		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"webfishing","experimentalVK":false,"fileSizes":{"webfishing.pck":45948464,"webfishing.wasm":17860295},"focusCanvas":true,"gdnativeLibs":[]};
 		var engine = new Engine(GODOT_CONFIG);
@@ -246,4 +253,3 @@
 	//]]></script>
 </body>
 </html>
-
